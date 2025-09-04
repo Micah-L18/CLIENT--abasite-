@@ -1,0 +1,131 @@
+@import './variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--color-cream);
+  color: var(--color-forest-green);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  color: var(--color-forest-green);
+}
+
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 var(--spacing-md);
+}
+
+.container-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.btn {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.btn-primary {
+  background-color: var(--color-sage);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-forest-green);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--color-terracotta);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-clay-brown);
+  color: white;
+}
+
+.card {
+  background: white;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-alt {
+  background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-content {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero p {
+    font-size: 1.1rem !important;
+  }
+  
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .why-choose-section > div > div {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .section h2 {
+    font-size: 2rem !important;
+  }
+}
